@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .xyz {
+            margin-bottom: 0px;
+            background-image: url('{% static "image/bloodcell.jpg" %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+            position: relative;
+        }
+
+        .xyz::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Overlay for contrast */
+        }
+
+        .xyz .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .lead {
+            font-size: 1.75rem;
+            font-weight: bold;
+        }
+
+        .highlight-text {
+            color: #ff4d4d; /* Highlight color for important text */
+        }
+
+        .jumbotron.custom-jumbotron {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-color: #f9f9f9;
+            padding: 2rem 1rem;
+        }
+
+        .btn-custom {
+            background-color: #ff4d4d;
+            color: white;
+            border-radius: 20px;
+            padding: 0.75rem 2rem;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff3333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    {% include "blood/navbar.html" %}
+    <br>
+
+    <!-- Jumbotron Section -->
+    <section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
+        <div class="container text-center">
+            <h1 class="display-4">Save a Life, Donate Blood</h1>
+            <p class="lead">Be the reason for someone's heartbeat today.</p>
+            <br>
+            <a href="#" class="btn btn-custom">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <div class="jumbotron custom-jumbotron text-center">
+        <h2 class="highlight-text">Welcome To Blood Bank Management System</h2>
+        <p class="lead">- Available Features: Patient Login, Donor Login, Admin Login -</p>
+        <p>Join us and make a difference in the lives of those in need.</p>
+        <a href="#" class="btn btn-custom">Get Started</a>
+    </div>
+
+    {% include "blood/footer.html" %}
+</body>
+
+</html>

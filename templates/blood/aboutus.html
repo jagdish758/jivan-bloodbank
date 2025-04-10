@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Blood Bank Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        .hero-section {
+            background-image: url('{% static "image/bloodcell.jpg" %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 60vh;
+            position: relative;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+        }
+
+        .hero-section h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff4d4d;
+        }
+
+        .mission, .vision {
+            background-color: #f9f9f9;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .mission p, .vision p {
+            font-size: 1.25rem;
+            margin: 0 auto;
+            max-width: 800px;
+            color: #555;
+        }
+
+        .team-section {
+            padding: 3rem 1rem;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            margin-bottom: 2rem;
+        }
+
+        .team-member {
+            margin-bottom: 2rem;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .team-member h5 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    {% include "blood/navbar.html" %}
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>About Us</h1>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <h2 class="section-title">Our Mission</h2>
+            <p>
+                At the Blood Bank Management System, our mission is to provide a reliable, transparent, and accessible
+                platform for managing blood donations. We aim to ensure that no patient ever has to wait for life-saving
+                blood by bridging the gap between donors and those in need.
+            </p>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision">
+        <div class="container">
+            <h2 class="section-title">Our Vision</h2>
+            <p>
+                We envision a world where blood donation is streamlined, efficient, and responsive to urgent medical
+                needs. Our vision is to create a community of selfless donors who will ensure that blood supplies are
+                readily available at all times for hospitals and emergency centers.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+
+            <div class="row">
+                <!-- Team Member 1 -->
+                <div class="col-md-4 team-member">
+                    <img src="{% static 'image/team1.jpg' %}" alt="Team Member 1">
+                    <h5>John Doe</h5>
+                    <p>Founder & CEO</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="col-md-4 team-member">
+                    <img src="{% static 'image/team2.jpg' %}" alt="Team Member 2">
+                    <h5>Jane Smith</h5>
+                    <p>Chief Operating Officer</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="col-md-4 team-member">
+                    <img src="{% static 'image/team3.jpg' %}" alt="Team Member 3">
+                    <h5>Emily Johnson</h5>
+                    <p>Head of Donor Relations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include "blood/footer.html" %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

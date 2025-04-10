@@ -1,0 +1,15 @@
+# Byte-compiled / cache files
+*.pyc
+__pycache__/
+
+# Django local settings
+*.sqlite3
+.env
+
+# Static & media files (optional, if generated)
+static/
+media/
+
+# OS or editor specific
+.DS_Store
+*.vscode

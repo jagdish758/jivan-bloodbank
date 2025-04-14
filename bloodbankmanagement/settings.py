@@ -119,7 +119,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+# This is used to collect static files into one place for production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
